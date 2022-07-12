@@ -1,6 +1,6 @@
 # Heart Segmentation with U-Net using PyTorch and Monai
 <p> U-Net model training and testing scrips for heart detection in 3D CT scans, implemented using PyTorch and Monai (Medical Open Network
-for Artificial Intelligence framework) </p>
+for Artificial Intelligence framework). </p>
 
 ![image](https://user-images.githubusercontent.com/108872549/178572416-69584a33-4378-46f9-a614-cc8177de8632.png)
 
