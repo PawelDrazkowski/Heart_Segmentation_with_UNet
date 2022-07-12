@@ -37,7 +37,7 @@ def prepare(data_path, img_size):
         [
             LoadImaged(keys=['image', 'label']),
             AddChanneld(keys=['image', 'label']),
-            ScaleIntensityRanged(keys='image', a_min=0, a_max=1500, b_min=0.0, b_max=1.0, clip=True), # improving contrast of an image: 'a' values should be tuned depending on used data
+            ScaleIntensityRanged(keys='image', a_min=0, a_max=1500, b_min=0.0, b_max=1.0, clip=True), 
             Resized(keys=['image', 'label'], spatial_size=[img_size, img_size, 128]),
             ToTensord(keys=['image', 'label'])
         ]
@@ -47,7 +47,7 @@ def prepare(data_path, img_size):
         [
             LoadImaged(keys=['image', 'label']),
             AddChanneld(keys=['image', 'label']),
-            ScaleIntensityRanged(keys='image', a_min=0, a_max=1500, b_min=0.0, b_max=1.0, clip=True), # improving contrast of an image: 'a' values should be tuned depending on used data
+            ScaleIntensityRanged(keys='image', a_min=0, a_max=1500, b_min=0.0, b_max=1.0, clip=True), 
             Resized(keys=['image', 'label'], spatial_size=[img_size, img_size, 128]),
             ToTensord(keys=['image', 'label'])
         ]
