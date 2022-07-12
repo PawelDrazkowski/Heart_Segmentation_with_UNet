@@ -12,8 +12,7 @@ from monai.transforms import (
     ScaleIntensityRanged,
     Resized
     )
-from monai.data import Dataset, DataLoader
-
+from monai.data import Dataset, DataLoader 
 from monai.losses import DiceLoss 
 
 def prepare(data_path, img_size):
@@ -101,7 +100,7 @@ def train(train_loader, test_loader, model, max_epochs, device, optimizer, loss_
         train_epoch_loss = 0
         train_step = 0
         epoch_metric_train = 0
-        
+
         for batch_data in train_loader:
             
             train_step += 1

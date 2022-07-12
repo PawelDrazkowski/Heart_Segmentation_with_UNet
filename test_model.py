@@ -1,14 +1,17 @@
 import torch
 import os 
-from monai.utils import first
-from monai.inferers import sliding_window_inference
+
 import matplotlib.pyplot as plt
 import numpy as np
+
+from monai.utils import first
+from monai.inferers import sliding_window_inference
+
 
 def test(test_loader, model, model_path, img_size, device, s_min, s_max):
     
     '''
-        Functions performs testing of provided model using data of first patient from 'test_data' directory. 
+        Function performs testing of provided model using data of first patient from 'test_data' directory. 
 
         Plots tested images with corresponding labels and predicted segmentation results. 
     '''
