@@ -34,7 +34,7 @@ def test(test_loader, model, model_path, img_size, device, s_min, s_max):
             plt.title(f"Slice {i}: Label")
             plt.imshow(test_patient["label"][0, 0, :, :, i] != 0)
             plt.subplot(1, 3, 3)
-            plt.title(f"Slice {i}: Predicted mask")
+            plt.title(f"Slice {i}: Predicted segmentation result")
             plt.imshow(test_outputs.detach().cpu()[0, 1, :, :, i])
             plt.show()
 
