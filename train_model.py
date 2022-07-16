@@ -119,13 +119,13 @@ def train(train_loader, test_loader, model, max_epochs, device, optimizer, loss_
             optimizer.step()
 
             train_epoch_loss += train_loss.item()
-            print(
-                f"{train_step}/{len(train_loader) // train_loader.batch_size}, "
-                f"Train_loss: {train_loss.item():.4f}")
-
             train_metric = dice_metric(outputs, label)
             epoch_metric_train += train_metric
-            print(f'Train_dice: {train_metric:.4f}')
+            print(
+                f"{train_step}/{len(train_loader) // train_loader.batch_size}, "
+                f"Train_loss: {train_loss.item():.4f}, "
+                f'Train_dice: {train_metric:.4f}')
+            
 
         print('-'*20)
         
